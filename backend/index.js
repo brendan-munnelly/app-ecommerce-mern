@@ -6,14 +6,18 @@ const mongoDBUri = process.env.mongoDBUri;
 const DBNAME = process.env.DBNAME;
 import mongoose from "mongoose";
 import cors from "cors";
+
 import product from "./Routes/products.js";
+import user from "./Routes/users.js";
 import isAuth from "./Middleware/auth.js";
 
 const app = express();
 
 // Middleware for CORS
 app.use(cors());
+
 app.use("/product", product);
+app.use("/users", user);
 app.use(isAuth);
 
 async function connectToMongoDB() {
