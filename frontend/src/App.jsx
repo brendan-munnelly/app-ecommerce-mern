@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import AddProductPage from "./pages/AddProductPage";
-import UpdateProductPage from "./pages/UpdateProductPage";
-import AuthPage from "./pages/AuthPage";
-import AdminPage from "./pages/AdminPage";
-import { AuthContext } from "./context/authContext";
-import RequiredAuth from "./util/authRoutes";
+import HomePage from "./pages/HomePage.jsx";
+import AddProductPage from "./pages/AddProductPage.jsx";
+import UpdateProductPage from "./pages/UpdateProductPage.jsx";
+import AuthPage from "./pages/AuthPage.jsx";
+import AdminPage from "./pages/AdminPage.jsx";
+import { AuthContext } from "./context/authContext.jsx";
+import RequiredAuth from "./util/authRoutes.jsx";
 
 function App() {
   const [userLoggedData, setUserLoggedData] = useState({
